@@ -1,13 +1,34 @@
 {
   "name": "@vue-mfe/ui-components",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ui-components.cjs",
+  "module": "./dist/ui-components.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "development": {
+      "import": "./src/index.ts"
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/ui-components.js"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.16.1"
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outDir dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vue": "^3.4.31",
+    "vue-tsc": "^2.0.26",
+    "vite": "^5.3.3"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  }
 }

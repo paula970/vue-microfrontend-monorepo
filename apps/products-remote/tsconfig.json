@@ -24,7 +24,8 @@
     /* Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@vue-mfe/ui-components": ["../../packages/ui-components/src/index.ts"]
     }
   },
   "include": [
@@ -34,5 +35,8 @@
     "src/**/*.vue",
     "env.d.ts" // <-- agrega esta línea
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "../../packages/ui-components" }
+  ]
 }

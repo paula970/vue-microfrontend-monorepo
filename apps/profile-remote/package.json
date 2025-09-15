@@ -18,6 +18,7 @@
     "start-mf": "npm run build && npm run preview"
   },
   "dependencies": {
+    "@vue-mfe/ui-components": "workspace:*",
     "pinia": "^3.0.3",
     "vue": "^3.5.18"
   },

@@ -1,8 +1,3 @@
-<script setup lang="ts">
-// Importa el componente que estás desarrollando
-import ProductListPage from './pages/ProductListPage.vue';
-</script>
-
 <template>
   <header>
     <h1>Modo de Desarrollo Aislado para 'products-remote'</h1>
@@ -12,3 +7,6 @@ import ProductListPage from './pages/ProductListPage.vue';
     <ProductListPage />
   </main>
 </template>
+<script setup lang="ts">
+import ProductListPage from './pages/ProductListPage.vue';
+</script>
