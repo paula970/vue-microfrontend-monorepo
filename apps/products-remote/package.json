@@ -21,8 +21,7 @@
     "@vue-mfe/ui-components": "workspace:*",
     "axios": "^1.12.1",
     "pinia": "^3.0.3",
-    "vue": "^3.5.18",
-    "vue-router": "^4.5.1"
+    "vue": "^3.5.18"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.4.1",
