@@ -1,45 +1,26 @@
-# apps/products-remote
+# Products Remote
 
-This template should help get you started developing with Vue 3 in Vite.
+Microfrontend que expone la página de productos para ser consumida por el host.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Scripts
 
 ```sh
-pnpm install
+pnpm dev      # Desarrollo en puerto 5001
+pnpm build    # Compila para producción
+pnpm preview  # Sirve la build en local
+pnpm start-mf # Compila y sirve para producción federada
 ```
 
-### Compile and Hot-Reload for Development
+## Exposición
 
-```sh
-pnpm dev
-```
+- El componente principal se expone vía Vite Federation en `vite.config.ts`.
+- Accesible desde el host en la ruta configurada.
 
-### Type-Check, Compile and Minify for Production
+## Dependencias
 
-```sh
-pnpm build
-```
+- `vue`, `pinia`, `vue-router` (si usas rutas internas)
+- `@vue-mfe/ui-components` (si usas componentes compartidos)
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Recomendaciones
 
-```sh
-pnpm test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+- Mantén el código modular y expón solo lo necesario al host.
