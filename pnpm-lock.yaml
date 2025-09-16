@@ -284,11 +284,14 @@ importers:
 
   packages/ui-components:
     devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^6.0.1
+        version: 6.0.1(vite@5.4.20(@types/node@22.18.4))(vue@3.5.21(typescript@5.8.3))
       typescript:
         specifier: ^5.4.5
         version: 5.8.3
       vite:
-        specifier: ^5.3.3
+        specifier: ^5.4.20
         version: 5.4.20(@types/node@22.18.4)
       vue:
         specifier: ^3.4.31
@@ -3299,6 +3302,12 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.44.0
       eslint-visitor-keys: 4.2.1
+
+  '@vitejs/plugin-vue@6.0.1(vite@5.4.20(@types/node@22.18.4))(vue@3.5.21(typescript@5.8.3))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.0-beta.29
+      vite: 5.4.20(@types/node@22.18.4)
+      vue: 3.5.21(typescript@5.8.3)
 
   '@vitejs/plugin-vue@6.0.1(vite@7.1.5(@types/node@22.18.4)(jiti@2.5.1))(vue@3.5.21(typescript@5.8.3))':
     dependencies:
