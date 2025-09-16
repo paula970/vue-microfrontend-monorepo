@@ -1,15 +1,17 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: './src/index.ts', // Asegúrate que este archivo exista y exporte tus componentes
+      entry: 'src/index.ts', // Cambia esto por el archivo de entrada principal de tus componentes
       name: 'UiComponents',
-      fileName: (format) => `ui-components.${format}.js`,
+      fileName: 'ui-components',
+      formats: ['es', 'cjs', 'umd'], // Opcional: formatos de salida
     },
     rollupOptions: {
+      // Externaliza dependencias que no quieras empaquetar
       external: ['vue'],
       output: {
         globals: {
@@ -18,4 +20,4 @@ export default defineConfig({
       }
     }
   }
-})
+});

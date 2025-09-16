@@ -17,6 +17,6 @@
     "vue-eslint-parser": "^10.2.0"
   },
   "scripts": {
-    "build": "pnpm --filter @vue-mfe/ui-components build && pnpm --filter . build"
+    "build": "pnpm --filter @vue-mfe/ui-components build"
   }
 }
