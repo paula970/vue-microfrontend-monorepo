@@ -1,35 +1,20 @@
 {
   "name": "@vue-mfe/ui-components",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
+  "main": "dist/ui-components.umd.js",
+  "module": "dist/ui-components.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-components.es.js",
+      "require": "./dist/ui-components.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
-  "main": "./dist/ui-components.cjs",
-  "module": "./dist/ui-components.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "development": {
-      "import": "./src/index.ts"
-    },
-    "import": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/ui-components.js"
-    }
-  },
   "scripts": {
-    "dev": "vite",
     "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outDir dist"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.1",
-    "typescript": "^5.4.5",
-    "vite": "^5.4.20",
-    "vue": "^3.4.31",
-    "vue-tsc": "^2.0.26"
-  },
-  "peerDependencies": {
-    "vue": "^3.4.0"
   }
 }

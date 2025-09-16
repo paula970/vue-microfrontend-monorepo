@@ -5,13 +5,12 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: 'src/index.ts', // Cambia esto por el archivo de entrada principal de tus componentes
+      entry: 'src/index.ts',
       name: 'UiComponents',
       fileName: 'ui-components',
-      formats: ['es', 'cjs', 'umd'], // Opcional: formatos de salida
+      formats: ['es', 'umd'] // O 'cjs' si prefieres
     },
     rollupOptions: {
-      // Externaliza dependencias que no quieras empaquetar
       external: ['vue'],
       output: {
         globals: {
