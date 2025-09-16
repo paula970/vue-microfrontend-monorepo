@@ -15,8 +15,8 @@ export default defineConfig({
       remotes: {
         // Dónde encontrar los microfrontends remotos
         // Clave (nombre del remoto) : Valor (URL del remoteEntry.js)
-        products_remote: 'http://localhost:5001/dist/assets/remoteEntry.js',
-        profile_remote: 'http://localhost:5002/dist/assets/remoteEntry.js',
+        products_remote: process.env.VITE_PRODUCTS_REMOTE_URL || 'http://localhost:5001/dist/assets/remoteEntry.js',
+        profile_remote: process.env.VITE_PROFILE_REMOTE_URL || 'http://localhost:5002/dist/assets/remoteEntry.js',
       },
       shared: ['vue', 'pinia', 'vue-router'], // Compartir las mismas dependencias
     }),
